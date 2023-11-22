@@ -150,6 +150,7 @@ ob_start();
                                     <!-- Blog -->
                                     <li class="menu-item has-children mega-menu">
                                         <a href="javascript:void(0)">Blog</a>
+                                        
                                     </li>
                                     <li class="menu-item has-children">
                                         <?php
