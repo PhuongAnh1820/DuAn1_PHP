@@ -370,6 +370,33 @@
                             <span class="arrow-icon"></span>
                         </li>
                     </ul>
+                    <nav class="category-nav white-nav  ">
+                                <div>
+                                    
+                                    <a href="javascript:void(0)" class="category-trigger">Thể loại sách</a>
+                                    <ul class="category-menu">
+                                        <?php
+                                           foreach ($dsdm as $dm){
+                                            extract($dm);  
+                                            $linkdm="index.php?act=sanpham&iddm=".$id;
+                                            echo '<li><a href="'.$linkdm.'">'.$name.'</a></li>';
+                                           }
+                                        ?>
+                                        <!-- <li class="cat-item has-children"><a href="#">Arts & Photography</a></li>
+                                        <li class="cat-item has-children mega-menu"><a href="#">Biographies</a></li>
+                                        <li class="cat-item has-children"><a href="#">Business & Money</a></li>
+                                        <li class="cat-item has-children"><a href="#">Calendars</a></li>
+                                        <li class="cat-item has-children"><a href="#">Children's Books</a></li>
+                                        <li class="cat-item has-children"><a href="#">Comics</a></li>
+                                        <li class="cat-item"><a href="#">Perfomance Filters</a></li>
+                                        <li class="cat-item has-children"><a href="#">Cookbooks</a></li>
+                                        <li class="cat-item "><a href="#">Accessories</a></li>
+                                        <li class="cat-item "><a href="#">Education</a></li>
+                                        <li class="cat-item hidden-menu-item"><a href="#">Indoor Living</a></li>
+                                        <li class="cat-item"><a href="#" class="js-expand-hidden-menu">More Categories</a></li> -->
+                                    </ul>
+                                </div>
+                            </nav>
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane show active" id="shop" role="tabpanel" aria-labelledby="shop-tab">
                             <div class="product-slider multiple-row  slider-border-multiple-row  sb-slick-slider"

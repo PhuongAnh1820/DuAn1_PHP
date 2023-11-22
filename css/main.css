@@ -22773,6 +22773,7 @@ input[type=number] {
   position: relative;
   max-width: 270px;
   z-index: 180;
+  background-color: green;
 }
 .category-nav .category-trigger {
   position: relative;
@@ -22817,13 +22818,19 @@ input[type=number] {
   top: 0;
   margin-right: 25px;
 }
+/* .category-nav {
+  position: relative;
+  max-width: 270px;
+  z-index: 180;
+  background-color: green;
+} */
 .category-nav.show .category-menu {
   visibility: visible;
   opacity: 1;
   pointer-events: visible;
 }
 .category-nav.white-nav .category-trigger {
-  color: #fff;
+  color:  #a70909;
 }
 .category-nav.primary-nav {
   background: #62ab00;
