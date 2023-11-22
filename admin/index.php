@@ -2,10 +2,12 @@
 <?php
 
 include '../connect.php';
-include '../model/danhmuc.php';
+include '../global.php';
 include '../model/sanpham.php';
+include '../model/danhmuc.php';
 include 'header.php';
 include 'sidebar.php';
+
 include 'home.php';
  
 // Kiem tra
@@ -55,32 +57,29 @@ if(isset($_GET['act'])){
             include 'danhmuc/list.php';
             break;
         // San pham
-        case 'addsanpham':
-            if(isset($_POST['themmoi']) && $_POST['themmoi']){
-                $iddm=$_POST['iddm'];
+        case 'addsp':
+            if (isset($_POST['themmoi']) && $_POST['themmoi']) {
+                $iddm = $_POST['iddm'];
                 $name = $_POST['name'];
                 $price = $_POST['price'];
-                $description=$_POST['description_sp'];
-                $author=$_POST['author'];
-                $quantity=$_POST['quantity'];
+                $description = $_POST['description'];
+                $author = $_POST['author'];
+                $quantity = $_POST['quantity'];
+                $luotmua = $_POST['luotmua'];
+                $image = $_FILES['image']['name'];
+                $target_dir = "../upload/";
+                $target_file = $target_dir . basename($_FILES['image']['name']);
+                if (move_uploaded_file($_FILES['image']['tmp_name'], $target_file)) {
+                } else {
+                }
 
-                $image_sp=$_FILES['image']['name'];
-                $target_dir="../upload/";
-                $target_file=$target_dir . basename($_FILES['image']['name']);
-            if(move_uploaded_file($_FILES['image']['tmp_name'],$target_file)){
-                
-            }else{
-            
+                insert_sanpham($name, $price, $image, $description, $author, $quantity, $luotmua, $iddm);
+                $thongbao = "Thêm thành công";
             }
-            
-            insert_sanpham($name,$price,$image,$description,$author,$quantity,$iddm);
-               $thongbao="Thêm thành công";
-                
-                
-               }
-            $listdanhmuc=loadall_danhmuc() ;
+            $listdanhmuc = loadall_danhmuc();
             include 'sanpham/add.php';
             break;
+
 
         case 'listsp':
             $listsanpham=loadall_sanpham();

@@ -1,3 +1,8 @@
+<?php 
+
+ob_start();
+// Rest of your code
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -9,6 +14,8 @@
     <title>Pustok - Book Store HTML Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Use Minified Plugins Version For Fast Page Load -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" media="screen" href="css/plugins.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
@@ -21,7 +28,7 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-3">
-                            <a href="index.html" class="site-brand">
+                            <a href="index.php" class="site-brand">
                                 <img src="image/logo.png" alt="">
                             </a>
                         </div>
@@ -134,131 +141,56 @@
                                     </li>
                                     <!-- Shop -->
                                     <li class="menu-item has-children mega-menu">
-                                        <a href="javascript:void(0)">shop <i
-                                                class="fas fa-chevron-down dropdown-arrow"></i></a>
-                                        <ul class="sub-menu four-column">
-                                            <li class="cus-col-25">
-                                                <h3 class="menu-title"><a href="javascript:void(0)">Shop Grid </a></h3>
-                                                <ul class="mega-single-block">
-                                                    <li><a href="shop-grid.html">Fullwidth</a></li>
-                                                    <li><a href="shop-grid-left-sidebar.html">left Sidebar</a></li>
-                                                    <li><a href="shop-grid-right-sidebar.html">Right Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="cus-col-25">
-                                                <h3 class="menu-title"> <a href="javascript:void(0)">Shop List</a></h3>
-                                                <ul class="mega-single-block">
-                                                    <li><a href="shop-list.html">Fullwidth</a></li>
-                                                    <li><a href="shop-list-left-sidebar.html">left Sidebar</a></li>
-                                                    <li><a href="shop-list-right-sidebar.html">Right Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="cus-col-25">
-                                                <h3 class="menu-title"> <a href="javascript:void(0)">Product Details
-                                                        1</a></h3>
-                                                <ul class="mega-single-block">
-                                                    <li><a href="product-details.html">Product Details Page</a></li>
-                                                    <li><a href="product-details-affiliate.html">Product Details
-                                                            Affiliate</a></li>
-                                                    <li><a href="product-details-group.html">Product Details Group</a>
-                                                    </li>
-                                                    <li><a href="product-details-variable.html">Product Details
-                                                            Variables</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="cus-col-25">
-                                                <h3 class="menu-title"><a href="javascript:void(0)">Product Details
-                                                        2</a></h3>
-                                                <ul class="mega-single-block">
-                                                    <li><a href="product-details-left-thumbnail.html">left Thumbnail</a>
-                                                    </li>
-                                                    <li><a href="product-details-right-thumbnail.html">Right
-                                                            Thumbnail</a></li>
-                                                    <li><a href="product-details-left-gallery.html">Left Gallery</a>
-                                                    </li>
-                                                    <li><a href="product-details-right-gallery.html">Right Gallery</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="javascript:void(0)">shop</a>
                                     </li>
                                     <!-- Pages -->
                                     <li class="menu-item has-children">
-                                        <a href="javascript:void(0)">Pages <i
-                                                class="fas fa-chevron-down dropdown-arrow"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="compare.html">Compare</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
-                                            <li><a href="login-register.html">Login Register</a></li>
-                                            <li><a href="my-account.html">My Account</a></li>
-                                            <li><a href="order-complete.html">Order Complete</a></li>
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="contact-2.html">contact 02</a></li>
-                                        </ul>
+                                        <a href="javascript:void(0)">Pages</a>
                                     </li>
                                     <!-- Blog -->
                                     <li class="menu-item has-children mega-menu">
-                                        <a href="javascript:void(0)">Blog <i
-                                                class="fas fa-chevron-down dropdown-arrow"></i></a>
-                                        <ul class="sub-menu three-column">
-                                            <li class="cus-col-33">
-                                                <h3 class="menu-title"><a href="javascript:void(0)">Blog Grid</a></h3>
-                                                <ul class="mega-single-block">
-                                                    <li><a href="blog.html">Full Widh (Default)</a></li>
-                                                    <li><a href="blog-left-sidebar.html">left Sidebar</a></li>
-                                                    <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="cus-col-33">
-                                                <h3 class="menu-title"><a href="javascript:void(0)">Blog List </a></h3>
-                                                <ul class="mega-single-block">
-                                                    <!-- <li><a href="blog-list.html">Full Widh (Default)</a></li> -->
-                                                    <li><a href="blog-list-left-sidebar.html">left Sidebar</a></li>
-                                                    <li><a href="blog-list-right-sidebar.html">Right Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="cus-col-33">
-                                                <h3 class="menu-title"><a href="javascript:void(0)">Blog Details</a>
-                                                </h3>
-                                                <ul class="mega-single-block">
-                                                    <li><a href="blog-details.html">Image Format (Default)</a></li>
-                                                    <li><a href="blog-details-gallery.html">Gallery Format</a></li>
-                                                    <li><a href="blog-details-audio.html">Audio Format</a></li>
-                                                    <li><a href="blog-details-video.html">Video Format</a></li>
-                                                    <li><a href="blog-details-left-sidebar.html">left Sidebar</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="javascript:void(0)">Blog</a>
                                     </li>
-                                    <li class="menu-item">
+                                    <li class="menu-item has-children">
                                         <?php
                                         if(isset($_SESSION['username'])){
                                             extract($_SESSION['username']);
                                         ?>
                                         <a href="#"> Chào,<?=$username?></a>
-                                    </li>
+                                        <ul class="sub-menu">
+                                        <?php if($role==1){ ?>
+                                            <li><a href="admin/index.php">Admin</a></li>
+                                        <?php } ?>
+                                        
+                                            <li><a href="index.php?act=thoat">Đăng Xuất</a></li>
+                                            
+                                        </ul>
                                   <?php 
                                         }else{
-                                  ?>
-                                            <a href="contact.html">Contact</a>
+                                  ?> 
+                                   
+                                        <a href="javascript:void(0)"style="padding-top: 13px;padding-bottom: 0px;"><i class="material-icons" style="font-size:29px">person</i></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="index.php?act=dangky">Đăng ký</a></li>
+                                            <li><a href="index.php?act=dangnhap">Đăng nhập</a></li>
+                                        </ul>
+                                    </li>
                                         
                                     <?php } ?>
-
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div>
         <div class="site-mobile-menu">
             <header class="mobile-header d-block d-lg-none pt--10 pb-md--10">
                 <div class="container">
                     <div class="row align-items-sm-end align-items-center">
                         <div class="col-md-4 col-7">
-                            <a href="index.html" class="site-brand">
+                            <a href="index.php" class="site-brand">
                                 <img src="image/logo.png" alt="">
                             </a>
                         </div>
@@ -561,7 +493,7 @@
             <div class="container d-none d-lg-block">
                 <div class="row align-items-center">
                     <div class="col-lg-4">
-                        <a href="index.html" class="site-brand">
+                        <a href="index.php" class="site-brand">
                             <img src="image/logo.png" alt="">
                         </a>
                     </div>
@@ -683,106 +615,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--=================================
         Hero Area
         ===================================== -->
-        <section class="hero-area hero-slider-2">
-            <div class="container">
-                <div class="row align-items-lg-center">
-                    <div class="col-12">
-                        <div class="sb-slick-slider" data-slick-setting='{
-                                                                "autoplay": true,
-                                                                "autoplaySpeed": 8000,
-                                                                "slidesToShow": 1,
-                                                                "dots":true
-                                                                }'>
-                            <div class="single-slide bg-image" data-bg="image/bg-images/home-2-slider-2.jpg">
-                                <div class="home-content pl--30">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <span class="title-mid">Book Mockup</span>
-                                            <h2 class="h2-v2">Hardcover.</h2>
-                                            <p>Cover up front of book and
-                                                <br>leave summary</p>
-                                            <a href="shop-grid.html" class="btn btn-outlined--primary">
-                                                Shop Now
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-slide bg-image" data-bg="image/bg-images/home-2-slider-1.jpg">
-                                <div class="home-content pl--30">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <span class="title-mid">Book Mockup</span>
-                                            <h2 class="h2-v2">Hardcover.</h2>
-                                            <p>Cover up front of book and
-                                                <br>leave summary</p>
-                                            <a href="shop-grid.html" class="btn btn-outlined--primary">
-                                                Shop Now
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--=================================
-        Home Features Section
-        ===================================== -->
-        <section class="mb--30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3 col-md-6 mt--30">
-                        <div class="feature-box h-100">
-                            <div class="icon">
-                                <i class="fas fa-shipping-fast"></i>
-                            </div>
-                            <div class="text">
-                                <h5>Miễn phí vận chuyển</h5>
-                                <p> Đơn hàng trên 200k</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 mt--30">
-                        <div class="feature-box h-100">
-                            <div class="icon">
-                                <i class="fas fa-redo-alt"></i>
-                            </div>
-                            <div class="text">
-                                <h5>Đảm bảo hoàn tiền</h5>
-                                <p>Hoàn tiền 100%</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 mt--30">
-                        <div class="feature-box h-100">
-                            <div class="icon">
-                                <i class="fas fa-piggy-bank"></i>
-                            </div>
-                            <div class="text">
-                                <h5>Nhận hàng</h5>
-                                <p>Thanh toán khi nhận hàng</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6 mt--30">
-                        <div class="feature-box h-100">
-                            <div class="icon">
-                                <i class="fas fa-life-ring"></i>
-                            </div>
-                            <div class="text">
-                                <h5>Trợ giúp và hỗ trợ</h5>
-                                <p>Call us : 0342755585</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--================================

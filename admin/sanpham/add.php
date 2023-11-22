@@ -5,8 +5,8 @@
 </div>
 
 <div class="add" style="margin-left: 50px; margin-top: 50px;">
-<form action="index.php?act=addsanpham" method="post" enctype="multipart/form-data">
-<p style="font-size: 18px;">Danh muc</p>
+<form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
+<p style="font-size: 18px;">Thể loại sách</p>
 <select name="iddm">
   <?php
   foreach($listdanhmuc as $danhmuc){
@@ -18,7 +18,7 @@
    
      <br><br>
 <p style="font-size: 18px;">Tên Sách</p>
-   <input type="text" name="name_sp">
+   <input type="text" name="name">
      <br><br>
 
      <p style="font-size: 18px;">Giá</p>
@@ -26,11 +26,11 @@
      <br><br>
 
      <p style="font-size: 18px;">Ảnh</p>
-   <input type="file" name="image_sp">
+   <input type="file" name="image">
      <br><br>
 
      <p style="font-size: 18px;">Đặc điểm</p>
-   <input type="text" name="description_sp">
+   <input type="text" name="description">
      <br><br>
 
      <p style="font-size: 18px;">Tác giả</p>
@@ -39,6 +39,10 @@
 
      <p style="font-size: 18px;">Số Lượng Tồn</p>
    <input type="number" name="quantity">
+     <br><br>
+
+     <p style="font-size: 18px;">Lượt mua</p>
+   <input type="number" name="luotmua">
      <br><br>
    <input type="submit" name="themmoi" value="THÊM MỚI">    
    <input type="reset" value="NHẬP LẠI">

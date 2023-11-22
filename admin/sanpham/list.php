@@ -46,7 +46,7 @@
    
 </table>
 <br><br>
-<a href="index.php?act=addsanpham"><input type="button" name="themmoi" value="THÊM MỚI"></a>
+<a href="index.php?act=addsp"><input type="button" name="themmoi" value="THÊM MỚI"></a>
 
 <style>
     .tb{

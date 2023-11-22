@@ -2,6 +2,7 @@
 session_start();
 include 'connect.php';
 include 'view/header.php';
+include 'view/banner.php';
 include 'model/danhmuc.php';
 include 'model/taikhoan.php';
 
@@ -40,6 +41,10 @@ if (isset($_GET['act']) && $_GET['act'] != 0) {
             }
             include "view/taikhoan/dangnhap.php";
             break;
+        case 'thoat':
+            session_unset();
+            header('Location:index.php');
+            include 'index.php';
         default:
             include 'view/home.php';
             break;

@@ -1,8 +1,9 @@
 
 
 <?php 
-function insert_sanpham($name,$price,$image,$description,$author,$quanity,$iddm){
-    $sql = "INSERT INTO books(name_sp,price,image_sp,description,author,quanity,iddm) VALUES ('$name','$price','$image','$description','$author','$quanity','$iddm')";
+
+function insert_sanpham($name,$price,$image_sp,$description,$author,$quanity,$luotmua,$iddm){
+    $sql = "INSERT INTO books(name,price,image,description,author,quanity,luotmua,iddm) VALUES ('$name','$price','$image_sp','$description','$author','$quanity','$luotmua','$iddm')";
            pdo_execute($sql);
 }
 function delete_sanpham($id){

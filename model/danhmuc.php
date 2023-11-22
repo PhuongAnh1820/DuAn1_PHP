@@ -5,7 +5,6 @@ function insert_danhmuc($name){
 }
 function loadall_danhmuc() {
     $sql = "SELECT * FROM categories ORDER BY id DESC";
-    echo $sql;
     $listdanhmuc = pdo_query($sql);
     return $listdanhmuc;
 }
