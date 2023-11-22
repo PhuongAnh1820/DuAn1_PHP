@@ -7,11 +7,11 @@
 <div class="add" style="margin-left: 50px; margin-top: 50px;">
 <form action="index.php?act=addsp" method="post" enctype="multipart/form-data">
 <p style="font-size: 18px;">Thể loại sách</p>
-<select name="iddm">
-  <?php
-  foreach($listdanhmuc as $danhmuc){
-    extract($danhmuc);
-    echo '<option value="'.$id.'">'.$name.'</option>';
+    <select name="iddm">
+     <?php 
+    foreach($listdanhmuc as $danhmuc){
+     extract($danhmuc);
+      echo '<option value="'.$id.'">'.$name.'</option>';
   }
   ?>
 </select>

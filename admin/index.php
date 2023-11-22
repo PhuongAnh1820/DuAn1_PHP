@@ -66,6 +66,7 @@ if(isset($_GET['act'])){
                 $author = $_POST['author'];
                 $quantity = $_POST['quantity'];
                 $luotmua = $_POST['luotmua'];
+                // xu ly anh 
                 $image = $_FILES['image']['name'];
                 $target_dir = "../upload/";
                 $target_file = $target_dir . basename($_FILES['image']['name']);

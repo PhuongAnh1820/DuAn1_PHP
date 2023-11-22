@@ -3,10 +3,13 @@ session_start();
 include 'connect.php';
 include 'view/header.php';
 include 'view/banner.php';
+
 include 'model/danhmuc.php';
+include 'model/sanpham.php';
 include 'model/taikhoan.php';
 
 $listdanhmuc = loadall_danhmuc();
+
 if (isset($_GET['act']) && $_GET['act'] != 0) {
     $act = $_GET['act'];
     switch ($act) {
