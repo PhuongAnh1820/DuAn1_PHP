@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from htmldemo.net/pustok/pustok/index-5.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 Nov 2023 16:45:24 GMT -->
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,10 +69,8 @@
                                             </div>
                                             <div class=" single-cart-block ">
                                                 <div class="btn-block">
-                                                    <a href="cart.html" class="btn">View Cart <i
-                                                            class="fas fa-chevron-right"></i></a>
-                                                    <a href="checkout.html" class="btn btn--primary">Check Out <i
-                                                            class="fas fa-chevron-right"></i></a>
+                                                    <a href="cart.html" class="btn">View Cart <i class="fas fa-chevron-right"></i></a>
+                                                    <a href="checkout.html" class="btn btn--primary">Check Out <i class="fas fa-chevron-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -89,14 +88,13 @@
                         <div class="col-lg-3">
                             <nav class="category-nav white-nav  ">
                                 <div>
-                                    <a href="javascript:void(0)" class="category-trigger"><i
-                                            class="fa fa-bars"></i>Thể loại sách</a>
+                                    <a href="javascript:void(0)" class="category-trigger"><i class="fa fa-bars"></i>Thể loại sách</a>
                                     <ul class="category-menu">
-                                        <?php 
-                                           foreach ($listdanhmuc as $danhmuc){
-                                            extract($danhmuc);  
-                                            echo '<li><a href="#">'.$name.'</a></li>';
-                                           }
+                                        <?php
+                                        foreach ($listdanhmuc as $danhmuc) {
+                                            extract($danhmuc);
+                                            echo '<li><a href="#">' . $name . '</a></li>';
+                                        }
                                         ?>
                                         <!-- <li class="cat-item has-children"><a href="#">Arts & Photography</a></li>
                                         <li class="cat-item has-children mega-menu"><a href="#">Biographies</a></li>
@@ -130,12 +128,11 @@
                                 <ul class="main-menu menu-right main-menu--white li-last-0">
                                     <li class="menu-item has-children">
                                         <a href="">Home</a>
-                                       
+
                                     </li>
                                     <!-- Shop -->
                                     <li class="menu-item has-children mega-menu">
-                                        <a href="javascript:void(0)">shop <i
-                                                class="fas fa-chevron-down dropdown-arrow"></i></a>
+                                        <a href="javascript:void(0)">shop <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                                         <ul class="sub-menu four-column">
                                             <li class="cus-col-25">
                                                 <h3 class="menu-title"><a href="javascript:void(0)">Shop Grid </a></h3>
@@ -184,8 +181,7 @@
                                     </li>
                                     <!-- Pages -->
                                     <li class="menu-item has-children">
-                                        <a href="javascript:void(0)">Pages <i
-                                                class="fas fa-chevron-down dropdown-arrow"></i></a>
+                                        <a href="javascript:void(0)">Pages <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                                         <ul class="sub-menu">
                                             <li><a href="cart.html">Cart</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
@@ -200,8 +196,7 @@
                                     </li>
                                     <!-- Blog -->
                                     <li class="menu-item has-children mega-menu">
-                                        <a href="javascript:void(0)">Blog <i
-                                                class="fas fa-chevron-down dropdown-arrow"></i></a>
+                                        <a href="javascript:void(0)">Blog <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                                         <ul class="sub-menu three-column">
                                             <li class="cus-col-33">
                                                 <h3 class="menu-title"><a href="javascript:void(0)">Blog Grid</a></h3>
@@ -234,17 +229,17 @@
                                     </li>
                                     <li class="menu-item">
                                         <?php
-                                        if(isset($_SESSION['username'])){
+                                        if (isset($_SESSION['username'])) {
                                             extract($_SESSION['username']);
                                         ?>
-                                        <a href="#"> Chào,<?=$username?></a>
+                                            <a href="#"> Chào,<?= $username ?></a>
                                     </li>
-                                  <?php 
-                                        }else{
-                                  ?>
-                                            <a href="contact.html">Contact</a>
-                                        
-                                    <?php } ?>
+                                <?php
+                                        } else {
+                                ?>
+                                    <a href="contact.html">Contact</a>
+
+                                <?php } ?>
 
                                 </ul>
                             </div>
@@ -265,8 +260,7 @@
                         <div class="col-md-5 order-3 order-md-2">
                             <nav class="category-nav   ">
                                 <div>
-                                    <a href="javascript:void(0)" class="category-trigger"><i
-                                            class="fa fa-bars"></i>Browse
+                                    <a href="javascript:void(0)" class="category-trigger"><i class="fa fa-bars"></i>Browse
                                         categories</a>
                                     <ul class="category-menu">
                                         <li class="cat-item has-children">
@@ -380,8 +374,7 @@
                                         <a href="cart.html" class="cart-link link-icon"><i class="ion-bag"></i></a>
                                     </li>
                                     <li class="sin-link">
-                                        <a href="javascript:" class="link-icon hamburgur-icon off-canvas-btn"><i
-                                                class="ion-navicon"></i></a>
+                                        <a href="javascript:" class="link-icon hamburgur-icon off-canvas-btn"><i class="ion-navicon"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -569,8 +562,7 @@
                         <div class="main-navigation flex-lg-right">
                             <ul class="main-menu menu-right ">
                                 <li class="menu-item has-children">
-                                    <a href="javascript:void(0)">Home <i
-                                            class="fas fa-chevron-down dropdown-arrow"></i></a>
+                                    <a href="javascript:void(0)">Home <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                                     <ul class="sub-menu">
                                         <li> <a href="index.html">Home One</a></li>
                                         <li> <a href="index-2.html">Home Two</a></li>
@@ -581,8 +573,7 @@
                                 </li>
                                 <!-- Shop -->
                                 <li class="menu-item has-children mega-menu">
-                                    <a href="javascript:void(0)">shop <i
-                                            class="fas fa-chevron-down dropdown-arrow"></i></a>
+                                    <a href="javascript:void(0)">shop <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                                     <ul class="sub-menu four-column">
                                         <li class="cus-col-25">
                                             <h3 class="menu-title"><a href="javascript:void(0)">Shop Grid </a></h3>
@@ -628,8 +619,7 @@
                                 </li>
                                 <!-- Pages -->
                                 <li class="menu-item has-children">
-                                    <a href="javascript:void(0)">Pages <i
-                                            class="fas fa-chevron-down dropdown-arrow"></i></a>
+                                    <a href="javascript:void(0)">Pages <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                                     <ul class="sub-menu">
                                         <li><a href="cart.html">Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
@@ -644,8 +634,7 @@
                                 </li>
                                 <!-- Blog -->
                                 <li class="menu-item has-children mega-menu">
-                                    <a href="javascript:void(0)">Blog <i
-                                            class="fas fa-chevron-down dropdown-arrow"></i></a>
+                                    <a href="javascript:void(0)">Blog <i class="fas fa-chevron-down dropdown-arrow"></i></a>
                                     <ul class="sub-menu three-column">
                                         <li class="cus-col-33">
                                             <h3 class="menu-title"><a href="javascript:void(0)">Blog Grid</a></h3>
@@ -704,7 +693,8 @@
                                             <span class="title-mid">Book Mockup</span>
                                             <h2 class="h2-v2">Hardcover.</h2>
                                             <p>Cover up front of book and
-                                                <br>leave summary</p>
+                                                <br>leave summary
+                                            </p>
                                             <a href="shop-grid.html" class="btn btn-outlined--primary">
                                                 Shop Now
                                             </a>
@@ -719,7 +709,8 @@
                                             <span class="title-mid">Book Mockup</span>
                                             <h2 class="h2-v2">Hardcover.</h2>
                                             <p>Cover up front of book and
-                                                <br>leave summary</p>
+                                                <br>leave summary
+                                            </p>
                                             <a href="shop-grid.html" class="btn btn-outlined--primary">
                                                 Shop Now
                                             </a>
