@@ -22769,17 +22769,25 @@ input[type=number] {
     color: #333;
   }
 }
+.category-nav.white-nav {
+  background-color:  #62ab00;
+}
+
+.category-nav.white-nav .category-trigger {
+  color: white;
+}
 .category-nav {
   position: relative;
   max-width: 270px;
   z-index: 180;
-  background-color: green;
+  background-color: #62ab00;
 }
 .category-nav .category-trigger {
   position: relative;
   color: #000;
   text-decoration: none;
-  border: 2px solid #eeeeee;
+  background-color:  #62ab00;
+  border: 2px solid rgb(107, 135, 108);
   display: block;
   font-weight: 700;
   padding: 12px 10px 12px 15px;
@@ -22818,12 +22826,7 @@ input[type=number] {
   top: 0;
   margin-right: 25px;
 }
-/* .category-nav {
-  position: relative;
-  max-width: 270px;
-  z-index: 180;
-  background-color: green;
-} */
+
 .category-nav.show .category-menu {
   visibility: visible;
   opacity: 1;
@@ -28511,3 +28514,4 @@ p.form-messege.error {
 .accordion .card .card-body {
   padding: 0 30px 30px;
 }
+

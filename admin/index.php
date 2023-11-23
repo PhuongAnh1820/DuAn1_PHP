@@ -86,7 +86,39 @@ if(isset($_GET['act'])){
             $listsanpham=loadall_sanpham();
             include 'sanpham/list.php';
             break;
-
+        case 'suasp':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $sanpham=loadone_sanpham($_GET['id']);
+            }
+            $listdanhmuc=loadall_danhmuc();
+            include 'sanpham/update.php';
+            break;
+        case 'updatesp':
+  
+                if (isset($_POST['capnhat']) && $_POST['capnhat']) {
+                    $id=$_POST['id'];
+                    $iddm = $_POST['iddm'];
+                    $name = $_POST['name'];
+                    $price = $_POST['price'];
+                    $description = $_POST['description'];
+                    $author = $_POST['author'];
+                    $quantity = $_POST['quantity'];
+                    $luotmua = $_POST['luotmua'];
+                    // xu ly anh 
+                    $image = $_FILES['image']['name'];
+                    $target_dir = "../upload/";
+                    $target_file = $target_dir . basename($_FILES['image']['name']);
+                    if (move_uploaded_file($_FILES['image']['tmp_name'], $target_file)) {
+                    } else {
+                    }
+                    update_sanpham($id,$name, $price, $image, $description, $author, $quantity, $luotmua, $iddm);
+                    $thongbao = "Cat nhat thành công";
+                }
+                $listdanhmuc=loadall_danhmuc();
+                $listsanpham=loadall_sanpham();
+                include 'sanpham/list.php';
+                break;  
+             
         case 'xoasp':
                 if(isset($_GET['id'])&&($_GET['id']>0)){
                  delete_sanpham($_GET['id']);
@@ -95,7 +127,10 @@ if(isset($_GET['act'])){
                
                     include 'sanpham/list.php';
                 break;
-     
+        default:
+        include 'home.php';
+        break;
+        
             
     }
 }

@@ -2,17 +2,30 @@
 session_start();
 include 'connect.php';
 include 'view/header.php';
-include 'view/banner.php';
+
 include 'model/danhmuc.php';
 include 'model/sanpham.php';
 include 'model/taikhoan.php';
+include 'global.php';
 
 $dsdm = loadall_danhmuc();
-
+$spnew = loadall_sanpham_home();
 if (isset($_GET['act']) && $_GET['act'] != 0) {
     $act = $_GET['act'];
     switch ($act) {
-
+        case 'sanpham':
+            include 'view/sanpham.php';
+            break;
+        case 'sanphamct':
+            if(isset($_GET['id'])&&($_GET['id']>0)){
+                $id=$_GET['id'];
+                $onesp=loadone_sanpham($id);
+                include "view/sanphamct.php";
+            }else{
+                include "view/home.php";
+            }
+         
+            break;
         case 'dangky':
             if (isset($_POST['dangky'])) {
                 $username = $_POST['username'];
@@ -52,7 +65,9 @@ if (isset($_GET['act']) && $_GET['act'] != 0) {
             break;
     }
 } else {
+    include 'view/banner.php';
     include 'view/home.php';
 }
 
 include 'view/footer.php';
+?>
